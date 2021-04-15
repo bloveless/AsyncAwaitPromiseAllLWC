@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="HelloWorld" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+          <h1>Harvard Gallery</h1>
+          <div class="gallery-container">
+            <template for:each={records} for:item="record">
+              <div key={record.index} class="row">
+                <template for:each={record.value} for:item="item">
+                  <c-harvard-art-museum-gallery-item if:true={item} key={item.id} record={item}></c-harvard-art-museum-gallery-item>
+                </template>
+              </div>
+            </template>
+          </div>
+          <div class="pagination-container">
+            <button type="button" onclick={previousPage}>&lt;</button>
+            <span class="current-page">
+              {currentPage}
+            </span>
+            <button type="button" onclick={nextPage}>&gt;</button>
+          </div>
+        </div>
+      </lightning-card>
+</template>

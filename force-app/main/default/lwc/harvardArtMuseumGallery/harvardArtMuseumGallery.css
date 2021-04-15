@@ -1,0 +1,24 @@
+h1 {
+  font-size: 2em;
+  font-weight: bolder;
+  margin-bottom: .5em;
+}
+
+.gallery-container .row {
+  display: flex;
+}
+
+c-harvard-art-museum-gallery-item {
+  margin: 1em;
+  flex-grow: 1;
+  width: calc(25% - 2em);
+}
+
+.pagination-container {
+  text-align: center;
+}
+
+.pagination-container .current-page {
+  display: inline-block;
+  margin: 0 .5em;
+}
